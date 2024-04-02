@@ -12,12 +12,13 @@ Descrição curta do repositório.
 
 ## Pré-requisitos
 
-Esta seção detalha os pré-requisitos que outro usuário precisa atingir para poder executar o código-fonte. Por exemplo,
-o parágrafo abaixo descreve um requisito do Python Anaconda:
-
 Este repositório requer a última versão do [Python Anaconda](https://www.anaconda.com/download) para ser executado, 
 visto que usa o gerenciador de pacotes conda. O código executará em qualquer Sistema Operacional, mas foi desenvolvido
 originalmente para Windows 10 Pro (64 bits).
+
+No instalador, certifique-se de adicionar à variável PATH do sistema o caminho do Anaconda:
+
+![img.png](images/path_anaconda.png)
 
 As configurações da máquina que o repositório foi desenvolvido encontram-se na tabela abaixo:
 
@@ -31,12 +32,11 @@ As configurações da máquina que o repositório foi desenvolvido encontram-se 
 
 ## Instalação
 
-Descreva aqui as instruções para instalar as ferramentas, bibliotecas e plugins para executar o código do projeto:
+Crie um novo ambiente virtual com os seguintes comandos (a partir da linha de comando):
 
 ```bash
-conda create --name myenv python==3.* pip --yes
+conda env create -f environment.yml
 conda activate myenv
-conda install --file requirements.txt --yes
 ```
 
 ## Instruções de Uso
@@ -45,6 +45,7 @@ Descreva aqui o passo-a-passo que outros usuários precisam realizar para conseg
 deste projeto:
 
 ```bash
+conda activate myenv
 python main.py
 ```
 
@@ -56,4 +57,4 @@ O repositório foi originalmente desenvolvido por Fulano: [fulano@ufsm.br]()
 
 Adicione aqui entradas numa lista com a documentação pertinente:
 
-* [Documentação ibm_db](https://www.ibm.com/docs/en/db2/11.5?topic=framework-application-development-db)
+* [Documentação coplin-db2](https://pypi.org/project/coplin-db2/)
